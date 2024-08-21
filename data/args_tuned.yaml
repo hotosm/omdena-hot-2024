@@ -1,0 +1,37 @@
+epochs: 500
+patience: 500
+imgsz: 256
+batch: 64
+amp: True
+# lr setup
+optimizer: 'auto'
+lr0: 0.00854
+lrf: 0.01232
+momentum: 0.95275
+weight_decay: 0.00058
+warmup_epochs: 3.82177
+warmup_momentum: 0.81423
+# loss parameters
+box: 7.48109
+cls: 0.775
+dfl: 1.5
+# aug use
+hsv_h: 0.01269
+hsv_s: 0.68143
+hsv_v: 0.27
+# aug turn off
+mosaic: 0
+translate: 0
+scale: 0
+shear: 0
+flipud: 0.5
+fliplr: 0.255
+erasing: 0
+degrees: 15.75
+# Add other parameters as needed
+overlap_mask: False
+nbs: 64
+plots: True
+cache: True
+val: True
+save: True
