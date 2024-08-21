@@ -37,7 +37,7 @@ Performance tuning has shown that specific training arguments improve model outc
 - Left-right Flip Probability (fliplr)
 - Classification Loss Weight (cls)
 
-We documented these arguments and values in the <a href="https://github.com/OmdenaAI/HOTOSM/blob/main/data/args_tuned.yaml" target="_blank">args.yaml</a> file, allowing for replication and refinement of training conditions.
+We documented the recommended training arguments and values in the <a href="https://github.com/OmdenaAI/HOTOSM/blob/main/data/args_tuned.yaml" target="_blank">args.yaml</a> file.
 
 ## Evaluation
 
