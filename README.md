@@ -15,19 +15,19 @@ This project focuses on enhancing global mapping capabilities by employing the Y
 The data source was the <a href="https://beta.source.coop/ramp/ramp/" target="_blank">Replicable AI for Microplanning (RAMP)</a> dataset downloaded from Source Cooperative. This dataset consists of 100,015 image-label pairs in TIF-GEOJSON formats, sourced from 22 different regions and was the result of a collaborative initiative between DevGlobal and the World Health Organization. 
 
 #### <a href="https://github.com/OmdenaAI/HOTOSM/blob/main/notebooks/preprocessing.ipynb" target="_blank">Preprocessing.ipynb</a>
-The preprocessing notebook processes the initial data to create the V1 dataset. It performs several functions:
+The preprocessing notebook processes the initial data to create the V1 dataset. 
 - Reduces the number of background images from 18% to 5%
 - Removed errors discovered in the dataset post a limited manual review.
 - Converts images from TIF-GEOJSON to YOLO-compatible JPG/TXT formats
 
 #### <a href="https://github.com/OmdenaAI/HOTOSM/blob/main/notebooks/pruning.ipynb" target="_blank">Pruning.ipynb</a>
-The pruning notebook enhances the quality of the dataset by:
-- Creates the V2 dataset by removing problematic image-label pairs identified using inference scores with Model 1. 
+The pruning notebook enhances the quality of the dataset. 
+- Creates the V2 dataset by removing problematic image-label pairs identified using Model 1's inference scores. 
 - Generates the V3 dataset by excluding images from V2 with resolutions outside the 0.3 to 0.4 meters per pixel range
 
 ## Model Training
 
-<a href="https://github.com/OmdenaAI/HOTOSM/blob/main/notebooks/training.ipynb" target="_blank">Training.ipynb</a>
+#### <a href="https://github.com/OmdenaAI/HOTOSM/blob/main/notebooks/training.ipynb" target="_blank">Training.ipynb</a>
 
 The training notebook focuses on training the YOLOv8 segmentation model to segment rooftops using our custom datasets. Given the project's time and resource constraints, we selected the small YOLO model configuration for training. However, for projects that can afford more computational resources and time, medium, large, and extra-large configurations of YOLO are recommended as they tend to achieve higher performance. For efficient training, we recommend using a GPU, such as Google Colab's High-RAM T4 GPU, which can complete 100 epochs in approximately 15 hours.
 
